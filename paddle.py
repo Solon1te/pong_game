@@ -2,19 +2,19 @@ from turtle import Turtle
 
 
 class Paddle(Turtle):
-    def __init__(self):
+    def __init__(self, x):
+        self.x = x
         super().__init__()
-        self.shape("square")
-        self.speed("fastest")
         self.pu()
+        self.shape("square")
         self.color("white")
-        self.turtlesize(2.5, .5)
-        self.goto(350, 0)
+        self.turtlesize(5, 1)
+        self.goto(self.x, 0)
 
     def move_up(self):
         new_y = self.ycor() + 20
-        self.goto(350, new_y)
+        self.goto(self.x, new_y)
 
     def move_down(self):
         new_y = self.ycor() - 20
-        self.goto(350, new_y)
+        self.goto(self.x, new_y)
