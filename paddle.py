@@ -18,3 +18,4 @@ class Paddle(Turtle):
     def move_down(self):
         new_y = self.ycor() - 20
         self.goto(self.x, new_y)
+
